@@ -150,9 +150,13 @@ skyseg.onnx
 .pixi
 *.egg-info
 
-*.py
-*.ipynb
+
 *.pt
 runs/*
 test_model/*
+
+
+*copy*.py
+*copy*.ipynb
+*delight_images*.ipynb
 
