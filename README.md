@@ -2,7 +2,7 @@
 
 **Paper:** *VGGTFace: Topologically Consistent Facial Geometry Reconstruction in the Wild* (AAAI26)
 
-VGGTFace is a system for reconstructing a topologically consistent 3D facial mesh from 16 multi-view face images captured in the wild in less than 10 seconds.
+VGGTFace is a system for reconstructing a topologically consistent 3D facial mesh from multi-view face images captured in the wild in less than 10 seconds.
 
 > 🚧 **Code Release:** We are preparing the open-source release.  
 > In the meantime, you can try the public demo below.
