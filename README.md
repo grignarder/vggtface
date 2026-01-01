@@ -15,6 +15,30 @@ Try VGGTFace in your browser (upload 16 images → reconstruct a mesh in one cli
 
 > **Note:** The current web demo supports **exactly 16 images** per reconstruction.
 
+## 🚀 Getting Started
+
+### 1. Install Pixel3DMM
+
+First, install **Pixel3DMM** following the instructions in their official repository:
+https://github.com/SimonGiebenhain/pixel3dmm.
+
+We rely on its pretrained UV predictor weights, but we do not require FLAME-related assets.
+Therefore, when running `install_preprocessing_pipeline.sh`, you only need to download the UV predictor weights.
+Running `download_flame2023.sh` is **not necessary** for VGGTFace.
+
+### 2. Preprocess multi-view images
+
+To preprocess multi-view images, run:
+
+`python preprocess.py --image_folder {image_folder} --output_folder {output_folder}`
+
+During preprocessing, we use Pixel3DMM’s UV predictor to estimate a UV map for each image,
+and use facer to estimate the mask for each image.
+
+Example:
+
+`python preprocess.py --image_folder ./examples/example1 --output_folder ./preprocessed_data/example1`
+
 ## 📝 Paper
 
 - Title: *VGGTFace: Topologically Consistent Facial Geometry Reconstruction in the Wild*  
