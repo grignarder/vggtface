@@ -4,9 +4,6 @@
 
 VGGTFace is a system for reconstructing a topologically consistent 3D facial mesh from multi-view face images captured in the wild in less than 10 seconds.
 
-> 🚧 **Code Release:** We are preparing the open-source release.  
-> In the meantime, you can try the public demo below.
-
 ## 🔗 Online Demo
 
 Try VGGTFace in your browser (upload 16 images → reconstruct a mesh in one click)!
@@ -14,6 +11,8 @@ Try VGGTFace in your browser (upload 16 images → reconstruct a mesh in one cli
 - **Gradio Demo:** https://uu31763-ba3f-b060fff2.westc.gpuhub.com:8443/
 
 > **Note:** The current web demo supports **exactly 16 images** per reconstruction.
+>
+> ⭐ If you find VGGTFace useful, please consider giving this repository a star!
 
 ## 🚀 Getting Started
 
@@ -26,7 +25,19 @@ We rely on its pretrained UV predictor weights, but we do not require FLAME-rela
 Therefore, when running `install_preprocessing_pipeline.sh`, you only need to download the UV predictor weights.
 Running `download_flame2023.sh` is **not necessary** for VGGTFace.
 
-### 2. Preprocess multi-view images
+### 2. Download VGGT pretrained weights
+
+Please download the pretrained weights from the official VGGT repository:
+
+https://github.com/facebookresearch/vggt
+
+After downloading, rename the checkpoint to `vggt_weights.pt` and place it under:
+
+`./pretrained_weights/vggt_weights.pt`
+
+> Note: Please follow VGGT’s official instructions and license terms when downloading and using the weights.
+
+### 3. Preprocess multi-view images
 
 To preprocess multi-view images, run:
 
@@ -38,6 +49,24 @@ and use facer to estimate the mask for each image.
 Example:
 
 `python preprocess.py --image_folder ./examples/example1 --output_folder ./preprocessed_data/example1`
+
+### 4. Reconstruct facial mesh
+
+After preprocessing, run the reconstruction script:
+
+`python vggtface_infer.py --BASE_PATHS {preprocessed_dir}`
+
+Example:
+
+`python vggtface_infer.py --BASE_PATHS ./preprocessed_data/example1`
+
+Once finished, you will find `result.ply` under the corresponding directory, which is the reconstructed mesh.
+
+#### Batch reconstruction (recommended)
+
+You can also reconstruct multiple multi-view sets sequentially in a single run (so VGGT weights are loaded only once). Provide multiple directories separated by commas:
+
+`python vggtface_infer.py --BASE_PATHS ./preprocessed_data/example1,./preprocessed_data/example2`
 
 ## 📝 Paper
 
@@ -54,6 +83,12 @@ If you use this work, please consider citing our paper.
 ## 📌 Notes
 
 - The demo currently reloads some components per run, so inference may be slow. We are working on optimizing it.
+
+## 📄 License
+
+This project is released under the MIT License (see `LICENSE`).
+It depends on third-party projects (e.g., Pixel3DMM and VGGT) that are distributed under their own licenses.
+Please make sure you comply with the corresponding upstream terms when using their code/models.
 
 ## 📬 Contact
 
