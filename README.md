@@ -50,6 +50,12 @@ Example:
 
 `python preprocess.py --image_folder ./examples/example1 --output_folder ./preprocessed_data/example1`
 
+Note: 
+
+1. You may need to install **pyfacer**—just follow the instructions in their official repository: [https://github.com/FacePerceiver/facer](https://github.com/FacePerceiver/facer).
+
+2. You may run into the error `forward() got an unexpected keyword argument 'bbox_scale_factor'`. If so, simply remove the `bbox_scale_factor=1.25` argument in `preprocess.py`. This seems to be caused by API inconsistencies across different versions of pyfacer.
+
 ### 4. Reconstruct facial mesh
 
 After preprocessing, run the reconstruction script:

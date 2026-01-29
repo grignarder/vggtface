@@ -112,7 +112,8 @@ for name in names:
             if i not in bad_indices:
                 total += seg_probs[0, i]
         mask = total.detach().cpu().numpy()
-    except Exception:
+    except Exception as e:
+        print(e)
         mask = np.zeros((518, 518), dtype=np.float32)
 
     np.save(os.path.join(mask_dir, f'{stem}.npy'), mask)
