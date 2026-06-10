@@ -8,7 +8,7 @@ VGGTFace is a system for reconstructing a topologically consistent 3D facial mes
 
 Try VGGTFace in your browser (upload 16 images → reconstruct a mesh in one click)!
 
-- **Gradio Demo:** https://uu31763-ba3f-b060fff2.westc.gpuhub.com:8443/
+- **Gradio Demo:** https://uu31763-9195-9f4b0121.westc.seetacloud.com:8443/
 
 > **Note:** The current web demo supports **exactly 16 images** per reconstruction.
 >
@@ -80,6 +80,18 @@ You can also reconstruct multiple multi-view sets sequentially in a single run (
 - PDF / arXiv: https://arxiv.org/abs/2511.20366
 
 If you use this work, please consider citing our paper.
+
+```
+@inproceedings{ming2026vggtface,
+  title={VGGTFace: Topologically Consistent Facial Geometry Reconstruction in the Wild},
+  author={Ming, Xin and Han, Yuxuan and Huang, Tianyu and Xu, Feng},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={10},
+  pages={8080--8088},
+  year={2026}
+}
+```
 
 ## 👥 Authors & Affiliation
 
