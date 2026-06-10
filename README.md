@@ -79,7 +79,7 @@ You can also reconstruct multiple multi-view sets sequentially in a single run (
 - Title: *VGGTFace: Topologically Consistent Facial Geometry Reconstruction in the Wild*  
 - PDF / arXiv: https://arxiv.org/abs/2511.20366
 
-If you use this work, please consider citing our paper.
+If you use this work, please consider citing our paper. 
 
 ```
 @inproceedings{ming2026vggtface,
