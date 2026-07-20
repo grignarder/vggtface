@@ -4,7 +4,7 @@
 
 VGGTFace is a system for reconstructing a topologically consistent 3D facial mesh from multi-view face images captured in the wild in less than 10 seconds.
 
-⭐ Our new work **VGGTFace2** has been accepted to SIGGRAPH Asia 2026! VGGTFace2 achieves faster inference speed and significantly higher reconstruction quality than VGGTFace. We will release the source code of VGGTFace2 soon – stay tuned!
+⭐ Our new work **VGGTFace2** has been accepted to SIGGRAPH Asia 2026 (Journal Track)! VGGTFace2 achieves faster inference speed and significantly higher reconstruction quality than VGGTFace. We will release the source code of VGGTFace2 soon – stay tuned! (If you are eager to know the details of VGGTFace2, feel free to contact me.)
 
 ## 🔗 Online Demo
 
@@ -15,6 +15,8 @@ Try VGGTFace in your browser (upload 16 images → reconstruct a mesh in one cli
 > **Note:** The current web demo supports **exactly 16 images** per reconstruction.
 >
 > ⭐ If you find VGGTFace useful, please consider giving this repository a star!
+>
+> **Important**: We will soon close this web demo and launch a web demo for VGGTFace2.
 
 ## 🚀 Getting Started
 
