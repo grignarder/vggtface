@@ -6,17 +6,9 @@ VGGTFace is a system for reconstructing a topologically consistent 3D facial mes
 
 ⭐ Our new work **UVFaceFusion (also named as VGGTFace2)** has been accepted to SIGGRAPH Asia 2026 (Journal Track)! UVFaceFusion achieves faster inference speed and significantly higher reconstruction quality than VGGTFace. Head over to https://github.com/grignarder/UVFaceFusion and experience one-click generation of registration-quality facial meshes!
 
-## 🔗 Online Demo
+## 🔗 Online Demo (closed)
 
-Try VGGTFace in your browser (upload 16 images → reconstruct a mesh in one click)!
-
-- **Gradio Demo:** https://uu31763-9195-9f4b0121.westc.seetacloud.com:8443/
-
-> **Note:** The current web demo supports **exactly 16 images** per reconstruction.
->
-> ⭐ If you find VGGTFace useful, please consider giving this repository a star!
->
-> **Important**: We will soon close this web demo and launch a web demo for VGGTFace2.
+> VGGTFace's online demo has been shut down. Head over to [UVFaceFusion](https://github.com/grignarder/UVFaceFusion) for faster and more powerful reconstruction!
 
 ## 🚀 Getting Started
 
